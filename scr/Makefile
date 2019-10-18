@@ -1,9 +1,9 @@
 
-output: ../obj/spacegame.o
-	gcc spacegame.o -lncurses -o ../bin/spacegame
+output: ../obj/main.o
+	gcc ../obj/main.o -lncurses -o ../bin/spacegame
 
-../obj/spacegame.o: spacegame.c
-	gcc -c spacegame.c -lncurses -o ../obj/spacegame.o
+../obj/main.o: main.c
+	gcc -c main.c -lncurses -o ../obj/main.o
 
 clean:
-	rm *.o spacegame
+	rm ../obj/*.o ../bin/spacegame
